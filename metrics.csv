@@ -1,0 +1,7 @@
+TimeSeries ID,workload_identity_federation/count.iam.googleapis.com/WorkloadIdentityPoolProvider.ALIGN_RATE.REDUCE_SUM.metric.type="iam.googleapis.com/workload_identity_federation/count" metric.label."result"="success" resource.type="iam.googleapis.com/WorkloadIdentityPoolProvider" .pool_id:github.project_id:build-push-image
+pool_id,github
+project_id,build-push-image
+Wed Oct 30 2024 15:05:00 GMT-0400 (Eastern Daylight Time),0.013333333333333334
+Wed Oct 30 2024 15:10:00 GMT-0400 (Eastern Daylight Time),0.013333333333333334
+Wed Oct 30 2024 15:15:00 GMT-0400 (Eastern Daylight Time),0.007499902776157381
+Wed Oct 30 2024 15:20:00 GMT-0400 (Eastern Daylight Time),0.0058334305571759535
