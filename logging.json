@@ -1,0 +1,523 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "carrilloian22@gmail.com",
+        "principalSubject": "user:carrilloian22@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.87.32",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/498.0.0 command/gcloud.artifacts.repositories.create invocation-id/448719a7720e43f6ac6e25651a017da3 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-10-30T18:32:45.627374599Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRepository",
+      "authorizationInfo": [
+        {
+          "resource": "projects/build-push-image/locations/us-central1",
+          "permission": "artifactregistry.repositories.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/build-push-image/locations/us-central1",
+      "request": {
+        "repository": {
+          "name": "projects/build-push-image/locations/us-central1/repositories/image-repo",
+          "format": "DOCKER"
+        },
+        "@type": "type.googleapis.com/google.devtools.artifactregistry.v1.CreateRepositoryRequest",
+        "repositoryId": "image-repo",
+        "parent": "projects/build-push-image/locations/us-central1"
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "us-central1"
+        ]
+      }
+    },
+    "insertId": "97t1jud22pk",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "artifactregistry.googleapis.com",
+        "project_id": "build-push-image",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRepository"
+      }
+    },
+    "timestamp": "2024-10-30T18:32:45.616900881Z",
+    "severity": "NOTICE",
+    "logName": "projects/build-push-image/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/build-push-image/locations/us-central1/operations/45141001-cf39-4f42-9db5-8e32a797a322",
+      "producer": "artifactregistry.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-10-30T18:32:45.916176220Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "service-agent-manager@system.gserviceaccount.com"
+      },
+      "requestMetadata": {
+        "callerIp": "private",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/build-push-image",
+          "permission": "resourcemanager.projects.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/build-push-image",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "projects/build-push-image",
+          "permission": "resourcemanager.projects.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/build-push-image",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/build-push-image",
+      "serviceData": {
+        "@type": "type.googleapis.com/google.iam.v1.logging.AuditData",
+        "policyDelta": {
+          "bindingDeltas": [
+            {
+              "action": "ADD",
+              "role": "roles/artifactregistry.serviceAgent",
+              "member": "serviceAccount:service-67617240775@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+            }
+          ]
+        }
+      },
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "resource": "67617240775",
+        "policy": {
+          "etag": "BwYltWqQMgg=",
+          "bindings": [
+            {
+              "role": "roles/owner",
+              "members": [
+                "user:carrilloian22@gmail.com"
+              ]
+            },
+            {
+              "members": [
+                "serviceAccountId:109478805997033896775"
+              ],
+              "role": "roles/artifactregistry.serviceAgent"
+            }
+          ]
+        }
+      },
+      "response": {
+        "etag": "BwYlte2o+/Q=",
+        "@type": "type.googleapis.com/google.iam.v1.Policy",
+        "bindings": [
+          {
+            "members": [
+              "serviceAccount:service-67617240775@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+            ],
+            "role": "roles/artifactregistry.serviceAgent"
+          },
+          {
+            "role": "roles/owner",
+            "members": [
+              "user:carrilloian22@gmail.com"
+            ]
+          }
+        ]
+      }
+    },
+    "insertId": "-1nj3xudofe6",
+    "resource": {
+      "type": "project",
+      "labels": {
+        "project_id": "build-push-image"
+      }
+    },
+    "timestamp": "2024-10-30T18:32:46.436568Z",
+    "severity": "NOTICE",
+    "logName": "projects/build-push-image/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-10-30T18:32:47.027007613Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "carrilloian22@gmail.com",
+        "principalSubject": "user:carrilloian22@gmail.com"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRepository",
+      "resourceName": "projects/build-push-image/locations/us-central1/repositories/image-repo",
+      "response": {
+        "mode": "STANDARD_REPOSITORY",
+        "@type": "type.googleapis.com/google.protobuf.Any",
+        "sbomConfig": {},
+        "format": "DOCKER",
+        "description": "artifact registry",
+        "vulnerabilityScanningConfig": {
+          "lastEnableTime": "2024-10-30T18:32:45.637770620Z"
+        },
+        "name": "projects/build-push-image/locations/us-central1/repositories/image-repo"
+      }
+    },
+    "insertId": "sblzmtbby",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "artifactregistry.googleapis.com",
+        "project_id": "build-push-image",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRepository"
+      }
+    },
+    "timestamp": "2024-10-30T18:32:54.891732904Z",
+    "severity": "NOTICE",
+    "logName": "projects/build-push-image/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/build-push-image/locations/us-central1/operations/45141001-cf39-4f42-9db5-8e32a797a322",
+      "producer": "artifactregistry.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-10-30T18:32:55.816636304Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "carrilloian22@gmail.com",
+        "principalSubject": "user:carrilloian22@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.87.32",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/498.0.0 command/gcloud.iam.workload-identity-pools.create invocation-id/438b3e970a9c4572a225b1ef0fe46c5b environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-10-30T18:46:12.980546887Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+      "authorizationInfo": [
+        {
+          "resource": "projects/build-push-image/locations/global",
+          "permission": "iam.workloadIdentityPools.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/build-push-image/locations/global",
+      "request": {
+        "parent": "projects/build-push-image/locations/global",
+        "workloadIdentityPoolId": "github",
+        "workloadIdentityPool": {
+          "displayName": "GitHub Actions Pool",
+          "disabled": false
+        },
+        "@type": "type.googleapis.com/google.iam.v1.CreateWorkloadIdentityPoolRequest"
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "5uomi9d2pox",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+        "project_id": "build-push-image",
+        "service": "iam.googleapis.com"
+      }
+    },
+    "timestamp": "2024-10-30T18:46:12.970400261Z",
+    "severity": "NOTICE",
+    "logName": "projects/build-push-image/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/67617240775/locations/global/workloadIdentityPools/github/operations/bigar5p5rg4qmeeyqdml2aq000000000",
+      "producer": "iam.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-10-30T18:46:13.968351984Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "carrilloian22@gmail.com",
+        "principalSubject": "user:carrilloian22@gmail.com"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+      "resourceName": "projects/build-push-image/locations/global",
+      "response": {
+        "@type": "type.googleapis.com/google.longrunning.Operation",
+        "name": "projects/67617240775/locations/global/workloadIdentityPools/github/operations/bigar5p5rg4qmeeyqdml2aq000000000"
+      }
+    },
+    "insertId": "-1bpvtfc2zj",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "iam.googleapis.com",
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+        "project_id": "build-push-image"
+      }
+    },
+    "timestamp": "2024-10-30T18:46:13.667239Z",
+    "severity": "NOTICE",
+    "logName": "projects/build-push-image/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/67617240775/locations/global/workloadIdentityPools/github/operations/bigar5p5rg4qmeeyqdml2aq000000000",
+      "producer": "iam.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-10-30T18:46:14.287155762Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "carrilloian22@gmail.com",
+        "principalSubject": "user:carrilloian22@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.87.32",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/498.0.0 command/gcloud.iam.workload-identity-pools.providers.create-oidc invocation-id/916bb134f22a4dfb8720457abc204d8e environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-10-30T18:53:55.605040144Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+      "authorizationInfo": [
+        {
+          "resource": "projects/build-push-image/locations/global/workloadIdentityPools/github",
+          "permission": "iam.workloadIdentityPoolProviders.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/build-push-image/locations/global/workloadIdentityPools/github",
+      "request": {
+        "parent": "projects/build-push-image/locations/global/workloadIdentityPools/github",
+        "workloadIdentityPoolProvider": {
+          "displayName": "My GitHub repo Provider",
+          "attributeMapping": {
+            "attribute.repository_owner": "assertion.repository_owner",
+            "attribute.actor": "assertion.actor",
+            "attribute.repository": "assertion.repository",
+            "google.subject": "assertion.sub"
+          },
+          "attributeCondition": "assertion.repository_owner == 'pitt-cs-1660'",
+          "oidc": {
+            "issuerUri": "https://token.actions.githubusercontent.com"
+          },
+          "disabled": false
+        },
+        "workloadIdentityPoolProviderId": "my-repo",
+        "@type": "type.googleapis.com/google.iam.v1.CreateWorkloadIdentityPoolProviderRequest"
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "5uomi9d2qr3",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+        "service": "iam.googleapis.com",
+        "project_id": "build-push-image"
+      }
+    },
+    "timestamp": "2024-10-30T18:53:55.591881410Z",
+    "severity": "NOTICE",
+    "logName": "projects/build-push-image/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/67617240775/locations/global/workloadIdentityPools/github/providers/my-repo/operations/bigarq4brk4qmehaysjnkay000000000",
+      "producer": "iam.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-10-30T18:53:56.010054524Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "carrilloian22@gmail.com",
+        "principalSubject": "user:carrilloian22@gmail.com"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+      "resourceName": "projects/build-push-image/locations/global/workloadIdentityPools/github",
+      "response": {
+        "name": "projects/67617240775/locations/global/workloadIdentityPools/github/providers/my-repo/operations/bigarq4brk4qmehaysjnkay000000000",
+        "@type": "type.googleapis.com/google.longrunning.Operation"
+      }
+    },
+    "insertId": "-f8jf14cigs",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+        "service": "iam.googleapis.com",
+        "project_id": "build-push-image"
+      }
+    },
+    "timestamp": "2024-10-30T18:53:55.984754Z",
+    "severity": "NOTICE",
+    "logName": "projects/build-push-image/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/67617240775/locations/global/workloadIdentityPools/github/providers/my-repo/operations/bigarq4brk4qmehaysjnkay000000000",
+      "producer": "iam.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-10-30T18:53:56.919243415Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "carrilloian22@gmail.com",
+        "principalSubject": "user:carrilloian22@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.87.32",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/498.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/61b003a5750d43699c66cf780460b952 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-10-30T19:06:09.138021103Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/build-push-image/locations/us-central1/repositories/image-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/build-push-image/locations/us-central1/repositories/image-repo",
+      "request": {
+        "resource": "projects/build-push-image/locations/us-central1/repositories/image-repo",
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy"
+      }
+    },
+    "insertId": "12v4eukd3aie",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "build-push-image",
+        "service": "artifactregistry.googleapis.com",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy"
+      }
+    },
+    "timestamp": "2024-10-30T19:06:09.128060205Z",
+    "severity": "NOTICE",
+    "logName": "projects/build-push-image/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-10-30T19:06:09.761199005Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "carrilloian22@gmail.com",
+        "principalSubject": "user:carrilloian22@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.148.87.32",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/498.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/d8f2556421ee4e54b2227729bbb65f13 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-10-30T19:13:26.831909173Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/build-push-image/locations/us-central1/repositories/image-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/build-push-image/locations/us-central1/repositories/image-repo",
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "resource": "projects/build-push-image/locations/us-central1/repositories/image-repo"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy"
+      }
+    },
+    "insertId": "12m3qsuc38y",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+        "project_id": "build-push-image",
+        "service": "artifactregistry.googleapis.com"
+      }
+    },
+    "timestamp": "2024-10-30T19:13:26.826012624Z",
+    "severity": "NOTICE",
+    "logName": "projects/build-push-image/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-10-30T19:13:27.253143739Z"
+  }
+]
